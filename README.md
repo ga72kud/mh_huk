@@ -10,7 +10,10 @@ It is in the early phase and has few features. The first steps are to read the d
 - Download the required datasets and place them in a input folder
 - Install the required packages (see the util/packages.jl)
 - The util/packages.jl activates a project environment
+- Run the main.jl
 
+## Structure
+- The datasets getting the loaded to the dataset X to obj.B and target vector y to obj.C
 ## Acknowledgement
 
 TODO

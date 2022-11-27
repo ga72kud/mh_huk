@@ -69,4 +69,13 @@ function filter_dataframe_for_y(obj, idx)
     obj.y=Float64.(sel_y./div_y)
     nothing
 end
+
+function visualizing_densities(obj)
+    sel_names=[:Exposure, :VehPower]
+    plot(layout=(length(sel_names), 1))
+    for (count,i) in enumerate(sel_names)
+        density!(obj.B[:, i], lab=String(i), subplot=count)
+    end
+    display(plot!())
+end
 nothing
