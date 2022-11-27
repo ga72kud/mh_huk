@@ -41,7 +41,7 @@ function find_indices_id_pol(obj)
 end
 
 function getting_only_float_matrix(obj)
-    float_df=obj.selB[!, [:IDpol,:ClaimNb, :Exposure, :VehPower, :VehAge, :DrivAge, :BonusMalus, :Density]]
+    float_df=obj.selB[!, [:VehPower, :VehAge, :DrivAge]]
     obj.X=Matrix(float_df)
     nothing
 end
@@ -71,7 +71,7 @@ function filter_dataframe_for_y(obj, idx)
 end
 
 function visualizing_densities(obj)
-    sel_names=[:Exposure, :VehPower]
+    sel_names=[:Exposure, :VehPower, :VehAge, :DrivAge, :BonusMalus]
     plot(layout=(length(sel_names), 1))
     for (count,i) in enumerate(sel_names)
         density!(obj.B[:, i], lab=String(i), subplot=count)

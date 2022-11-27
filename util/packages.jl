@@ -9,3 +9,4 @@ using DataFrames
 using StatsPlots
 using CategoricalArrays
 using LinearAlgebra
+using GLM

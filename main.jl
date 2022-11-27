@@ -11,5 +11,7 @@ filter_dataframe_for_X(obj, idx)
 filter_dataframe_for_y(obj, idx)
 getting_only_float_matrix(obj)
 
-
 pinv(obj.X)*obj.y
+
+linearRegressor = lm(obj.X, obj.y)
+@show linearRegressor
