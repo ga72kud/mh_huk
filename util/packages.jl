@@ -10,3 +10,5 @@ using StatsPlots
 using CategoricalArrays
 using LinearAlgebra
 using GLM
+using GaussianProcesses
+using MultivariateStats
